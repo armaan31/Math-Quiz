@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Math Quiz
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> <!--line 6-8 is bootstrap links and for features. -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container"> <!--gives padding or space around the content of the web page-->
+        <h4 id="p1name"></h4><span id="p1score"></span> <!--p1 name here is the id unlike the variable and key declared in main.js, the id p1name is expected to hold the value of the key p1name from the local storage declared in main.js,-->
+        <br><br>
+        <h4 id="p2name"></h4><span id="p2score"></span>
+        <button onclick="logout()" id="logout" class="glyphicon glyphicon-log-out btn-danger">LOGOUT</button>
+        <div class="container">
+        <br><br><br>
+        <center>
+            <h2 style="color: white; font-size: 45px;">Math Quiz</h2>
+            <br><br>
+            <h4 style="color: white;">Question turn person should put in 2 numbers that the other player will need to multiply and get the answer. Then, the answer player will need to multiply the two numbers displayed. If you answer correctly, a point will be added. If you answer incorrectly, nothing will happen. Question and Answer turns switch everytime someone answers.</h4>
+            <div id="login1">
+                <h3 id="playerquest"></h3>
+                <h3 id="playerans"></h3>
+            <div class="col-lg-6" id="output">
+            </div>
+                <br><br><br>
+                <h4>Number 1</h4>
+                <input type="text" placeholder="Enter Number" id="n1" class="form-control"> <!--id n1 is the first number entered for the calculation.-->
+                <br><br>
+                <h4>Number 2</h4>
+                <input type="text" placeholder="Enter Number 2" id="n2" class="form-control">
+            <button class="btn-success" onclick="send()">ENTER</button>
+        </center>
+    </div>
+    </div>
+    </body>
+    <script src="game.js"></script>
+</html>
